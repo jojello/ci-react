@@ -11,8 +11,8 @@
     "lru-cache": "^4.0.2",
     "next": "^2.4.3",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^15.7.0",
+    "react-dom": "^15.7.0",
     "react-ga": "^2.2.0"
   },
   "devDependencies": {
