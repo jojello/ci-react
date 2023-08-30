@@ -13,7 +13,8 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-ga": "^2.2.0"
+    "react-ga": "^2.2.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -27,7 +28,9 @@
     "build": "next build && git rev-parse HEAD > .next/BUILD_ID",
     "start": "NODE_ENV=production node server.js",
     "lint": "prettier 'utils/**/*.js' 'static/js/**/*.js' 'components/**/*.js' 'pages/**/*.js' '*.js' --write --single-quote --no-semi && standard --fix",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "lint-staged": {
     "*.js": [
@@ -42,5 +45,6 @@
       "$"
     ],
     "parser": "babel-eslint"
-  }
+  },
+  "snyk": true
 }
